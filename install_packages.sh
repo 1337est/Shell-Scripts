@@ -54,8 +54,8 @@ for package in "${packages[@]}"; do
     makepkg -si --noconfirm --needed || echo "Error building or installing ${package}"
 done
 
-# Step 6: Update system again
-sudo pacman -Syu
+# Step 6: Update system again to include AUR packages
+yay
 
 echo "##############################"
 echo "   AUR INSALLATION COMPLETE   "
